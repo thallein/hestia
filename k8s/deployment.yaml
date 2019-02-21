@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hestia-frontend-deployment
+  labels:
+    app: hestia-fe
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hestia-fe
+  template:
+    metadata:
+      labels:
+        app: hestia-fe
+    spec:
+      containers:
+      - name: hestia-fe
+        image: ayethin/hestia-fe:0.0.1
+        ports:
+        - containerPort: 80

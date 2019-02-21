@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: hestia-frontend-service
+spec:
+  selector:
+    app: hestia-fe
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80

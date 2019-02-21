@@ -1,0 +1,22 @@
+{
+  "name": "hestia",
+  "version": "0.0.1",
+  "description": "Helper to manage and connect relationships between characters in your worlds.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thallein/hestia.git"
+  },
+  "author": "LeeRhodes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thallein/hestia/issues"
+  },
+  "homepage": "https://github.com/thallein/hestia#readme",
+  "dependencies": {
+    "vue": "^2.6.6"
+  }
+}
