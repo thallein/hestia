@@ -6,10 +6,7 @@
   "scripts": {
     "test": "npm run test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thallein/hestia.git"
-  },
+  "repository": "git+https://github.com/thallein/hestia.git",
   "author": "LeeRhodes",
   "license": "MIT",
   "bugs": {
@@ -18,5 +15,6 @@
   "homepage": "https://github.com/thallein/hestia#readme",
   "dependencies": {
     "vue": "^2.6.6"
-  }
+  },
+  "private": false
 }
