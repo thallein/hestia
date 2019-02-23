@@ -4,6 +4,7 @@ const webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const MiniCssExtractPlugin  = require('mini-css-extract-plugin')
 const path = require('path')
 
 function resolve (dir) {
@@ -19,24 +20,20 @@ module.exports = {
       poll: true
     }
   },  module: {
-    rules: [
-      {
+    rules: [{
         test: /\.vue$/,
         use: 'vue-loader'
-      }, 
-      {
+      }, {
         test: /\.js$/,
         use: 'babel-loader'
-      }, 
-      {
+      }, {
         test: /\.styl(us)?$/,
         use: [
-          'vue-style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'stylus-loader'
         ]
-      },
-      {
+      }, {
         test: /\.(js|vue)$/,
         use: 'eslint-loader',
         enforce: 'pre'
@@ -55,6 +52,9 @@ module.exports = {
       from: resolve('static/img'),
       to: resolve('dist/static/img'),
       toType: 'dir'
-    }])
+    }]),
+    new MiniCssExtractPlugin({
+      filename: 'main.css'
+    })
   ]
 }
