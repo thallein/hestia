@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import WelcomeMessage from '@/components/Home/welcomeMessage'
+import WelcomeMessage from '@/components/home/welcomeMessage'
 
 describe('WelcomeMessage.vue', () => {
   it('renders props.msg when passed', () => {
