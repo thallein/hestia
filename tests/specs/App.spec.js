@@ -1,9 +1,14 @@
-import { mount, createLocalVue } from '@vue/test-utils'
-import App from '../../src/app/app.vue'
+import { shallowMount } from '@vue/test-utils'
+import WelcomeMessage from '@/components/Home/welcomeMessage'
 
-test('App has .center-content class', () => {
-  const vue = createLocalVue()
-  const app = mount(App, { vue })
+describe('WelcomeMessage.vue', () => {
+  it('renders props.msg when passed', () => {
+    const name = 'tester'
 
-  expect(app.classes()).toContain('center-content')
+    const wrapper = shallowMount(WelcomeMessage, {
+      propsData: { name }
+    })
+
+    expect(wrapper.text()).toBe('Hestia')
+  })
 })
