@@ -6,13 +6,13 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.{js,vue}'
   ],
-  coverageDirectory: '<rootDir>/test/coverage',
+  coverageDirectory: '<rootDir>/tests/coverage',
   moduleFileExtensions: [
     'js',
     'vue'
   ],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1'
+    '^@/(.*)$': '<rootDir>/src/app/$1'
   },
   transform: {
     '^.+\\.js$': 'babel-jest',

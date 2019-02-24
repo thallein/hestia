@@ -69,7 +69,7 @@ typings/
 
 # vuepress build output
 .vuepress/dist
-dist
+dist/
 
 # Serverless directories
 .serverless/
@@ -80,3 +80,5 @@ dist
 # DynamoDB Local files
 .dynamodb/
 
+# Test reports
+test/coverage/

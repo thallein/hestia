@@ -9,6 +9,7 @@ const PORT = 8080
 
 module.exports = merge(baseConfig, {
   mode: 'development',
+  entry: "./src/app/index.js",
 
   devServer: {
     clientLogLevel: 'warning',

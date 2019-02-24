@@ -11,9 +11,9 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'assets': utils.resolve('assets'),
-      'pages': utils.resolve('src/pages'),
+      'pages': utils.resolve('app/pages'),
       'static': utils.resolve('static'),
-      'components': utils.resolve('src/components')
+      'components': utils.resolve('app/components')
     }
   },
 
@@ -65,13 +65,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'index.html',
+      template: utils.resolve('index.html'),
       inject: true
     }),
     new VueLoaderPlugin(),
     new CopyWebpackPlugin([{
-      from: utils.resolve('static/img'),
-      to: utils.resolve('dist/static/img'),
+      from: utils.resolve('static/images'),
+      to: 'static/images',
       toType: 'dir'
     }])
   ]

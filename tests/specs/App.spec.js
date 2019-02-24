@@ -1,5 +1,5 @@
 import { mount, createLocalVue } from '@vue/test-utils'
-import App from '../../src/App'
+import App from '../../src/app/app.vue'
 
 test('App has .center-content class', () => {
   const vue = createLocalVue()

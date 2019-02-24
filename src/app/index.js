@@ -1,9 +1,12 @@
 import Vue from 'vue'
-import App from './App.vue'
-import '../assets/app.styl'
+import router from './router'
+import App from './app'
+
+import 'assets/css/app.styl'
 
 /* eslint-disable-next-line no-new */
 new Vue({
   el: '#app',
+  router,
   render: h => h(App)
 })
